@@ -1,0 +1,65 @@
+{
+  "rooms": [
+    {
+      "id": "entrance",
+      "description": " You are outside a cave, which is to your north. There may be treasure inside--you should bring it back here and use it to live happily ever after. \n Some supplies are on the ground, including a torch.",
+      "exits": {
+        "north": {"id":"dark_cave"}
+      },
+      "items": ["torch"],
+      "uses": [{
+        "item":"treasure",
+        "description":"You use the treasure to live happily ever after.",
+        "effect":{
+          "consumed":false,
+          "goto":"won"
+        }
+      }]
+    },
+    {
+      "id": "dark_cave",
+      "description":" It is dark, you might be eaten by a grue.",
+      "exits": {
+        "north": {"id":"eaten_dark"},
+        "east": {"id":"eaten_dark"},
+        "west": {"id":"eaten_dark"},
+        "south": {"id":"entrance"}
+      },
+      "uses": [{
+        "item":"torch",
+        "description":"You light the torch. Now you can see!",
+        "effect":{
+          "consumed":false,
+          "goto":"lit_cave"
+        }
+      }]
+    },
+    {
+      "id": "lit_cave",
+      "description": " You can see that the cave turns to the west, or you can go back south to the entrance.",
+      "exits": {
+        "west": {"id":"treasure_room"},
+        "south": {"id":"entrance"}
+      }  
+    },
+    {
+      "id": "treasure_room",
+      "description": " There treasure in front of you, ready for the taking! You can go back to the east",
+      "exits": {
+        "east": {"id":"dark_cave"},
+        "south": {"id":"entrance"}
+      }, 
+      "items": ["treasure"]
+    },
+    {
+      "id": "eaten_dark",
+      "description": " You search for an exit in the dark... but are eaten by a grue!",
+      "status":"lost"
+    },
+    {
+      "id": "won",
+      "description": " You've found the treasure! You are rich!",
+      "status":"won"
+    }
+  ]
+}

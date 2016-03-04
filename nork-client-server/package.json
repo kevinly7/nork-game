@@ -1,0 +1,12 @@
+{
+  "name": "nork-client-server",
+  "version": "1.0.0",
+  "description": "client-server implementation of nork",
+  "main": "index.js",
+  "scripts": {
+  	"start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenny Raymond & Kevin Ly",
+  "license": "ISC"
+}
