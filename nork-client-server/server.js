@@ -58,7 +58,7 @@ server.on('connection', function(socket) {
 });
 
 
-server.listen(3000, '127.0.0.1'); //listen on port 3000, host 127.0.0.1
+server.listen(53040, '128.95.242.208'); //listen on port 3000, host 127.0.0.1
 console.log(' server connected'); //print that server is connected with client
 
 //instatiate the game

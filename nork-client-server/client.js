@@ -11,8 +11,8 @@ var io = readline.createInterface({ //call the interface "io"
 //creating the client
 var client = new net.Socket(); //create socket server
 
-var HOST = '127.0.0.1';
-var PORT = 3000;
+var HOST = '128.95.242.208';
+var PORT = 53040;
 
 //connect to the server
 client.connect(PORT, HOST, function() {
